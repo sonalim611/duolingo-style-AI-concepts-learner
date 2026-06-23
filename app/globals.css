@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+:root {
+  --lingo-green: #58cc02;
+  --lingo-green-dark: #46a302;
+  --lingo-green-shadow: #3d8c02;
+  --lingo-green-light: #d7ffb8;
+  --lingo-gold: #ffc800;
+  --lingo-blue: #1cb0f6;
+}
+
+@theme inline {
+  --color-lingo-green: var(--lingo-green);
+  --color-lingo-green-dark: var(--lingo-green-dark);
+  --color-lingo-green-shadow: var(--lingo-green-shadow);
+  --color-lingo-green-light: var(--lingo-green-light);
+  --color-lingo-gold: var(--lingo-gold);
+  --color-lingo-blue: var(--lingo-blue);
+  --font-sans: var(--font-nunito);
+}
+
+body {
+  font-family: var(--font-nunito), system-ui, sans-serif;
+  color: #3c3c3c;
+  background: #f7f7f7;
+}
