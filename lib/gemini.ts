@@ -27,7 +27,7 @@ Lesson title: "${title}"
 Description: "${description}"
 Key topics to cover: ${topicHints.join(", ")}
 
-Generate exactly 3 lesson sections. Each section should have a clear title and 2-3 short paragraphs of engaging, simple explanations with real-world examples. Avoid jargon without explanation.
+Generate exactly 3 lesson sections. Each section should have a clear title and 2-3 short paragraphs of engaging, simple explanations with real-world examples. Avoid jargon without explanation. Use plain text only — do not use markdown, asterisks, or other formatting symbols in the content.
 
 Respond ONLY with valid JSON in this exact format (no markdown, no code fences):
 [

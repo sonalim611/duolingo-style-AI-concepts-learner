@@ -10,6 +10,7 @@ import {
 } from "@/lib/posthog";
 import { Button, LinkButton } from "./Button";
 import { ProgressBar } from "./ProgressUI";
+import { LessonContent } from "@/lib/formatContent";
 
 interface LessonClientProps {
   lesson: Lesson;
@@ -120,11 +121,7 @@ export function LessonClient({ lesson }: LessonClientProps) {
           {lesson.icon}
         </div>
         <h1 className="mb-4 text-xl font-extrabold text-gray-800">{current.title}</h1>
-        {current.content.split("\n\n").map((para, i) => (
-          <p key={i} className="mb-3 leading-relaxed text-gray-700">
-            {para}
-          </p>
-        ))}
+        <LessonContent content={current.content} />
       </div>
 
       {!aiEnhanced && (

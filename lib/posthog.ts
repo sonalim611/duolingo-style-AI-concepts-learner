@@ -71,7 +71,3 @@ export function trackQuizAnswered(
 export function trackStreakExtended(streak: number): void {
   capture("streak_extended", { streak });
 }
-
-export function trackPremiumClicked(source: string): void {
-  capture("premium_clicked", { source });
-}

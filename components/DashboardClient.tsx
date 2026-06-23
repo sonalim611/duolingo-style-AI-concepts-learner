@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import { UserProgress } from "@/lib/types";
 import { getProgress, getAccuracy } from "@/lib/progress";
 import { LESSONS } from "@/lib/lessons";
-import { trackPremiumClicked } from "@/lib/posthog";
 import { AppShell } from "@/components/Navigation";
 import { StatCard, ProgressBar } from "@/components/ProgressUI";
-import { Button } from "@/components/Button";
+import { Button, LinkButton } from "@/components/Button";
 
 export function DashboardClient() {
   const [progress, setProgress] = useState<UserProgress | null>(null);
@@ -96,23 +95,9 @@ export function DashboardClient() {
           )}
         </div>
 
-        <button
-          type="button"
-          onClick={() => trackPremiumClicked("dashboard")}
-          className="w-full rounded-2xl border-2 border-purple-300 bg-gradient-to-r from-purple-500 to-indigo-500 p-4 text-left text-white shadow-lg"
-        >
-          <div className="flex items-center gap-3">
-            <span className="text-3xl" aria-hidden>
-              👑
-            </span>
-            <div>
-              <p className="font-extrabold">Unlock Premium</p>
-              <p className="text-sm text-purple-100">
-                Advanced AI tracks, certificates, and more
-              </p>
-            </div>
-          </div>
-        </button>
+        <LinkButton href="/learn" fullWidth size="lg">
+          Back to Learning
+        </LinkButton>
 
         <Button
           variant="outline"

@@ -4,7 +4,6 @@ import Link from "next/link";
 import { Lesson } from "@/lib/types";
 import { getProgress, isLessonUnlocked } from "@/lib/progress";
 import { getLessonIds } from "@/lib/lessons";
-import { trackPremiumClicked } from "@/lib/posthog";
 import { useEffect, useState } from "react";
 
 interface LessonNodeProps {
@@ -56,27 +55,5 @@ export function LessonNode({ lesson, isLast }: LessonNodeProps) {
         <div className="my-2 h-8 w-1 rounded-full bg-gray-300" aria-hidden />
       )}
     </div>
-  );
-}
-
-export function PremiumBanner() {
-  return (
-    <button
-      type="button"
-      onClick={() => trackPremiumClicked("learn_path")}
-      className="w-full rounded-2xl border-2 border-purple-300 bg-gradient-to-r from-purple-500 to-indigo-500 p-4 text-left text-white shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98]"
-    >
-      <div className="flex items-center gap-3">
-        <span className="text-3xl" aria-hidden>
-          👑
-        </span>
-        <div>
-          <p className="font-extrabold">Go Premium</p>
-          <p className="text-sm text-purple-100">
-            Unlimited AI lessons, no ads, streak freezes
-          </p>
-        </div>
-      </div>
-    </button>
   );
 }

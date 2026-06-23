@@ -1,5 +1,5 @@
 import { AppShell } from "@/components/Navigation";
-import { LessonNode, PremiumBanner } from "@/components/LessonPath";
+import { LessonNode } from "@/components/LessonPath";
 import { getUnits } from "@/lib/lessons";
 
 export const metadata = {
@@ -37,8 +37,6 @@ export default function LearnPage() {
             </div>
           </section>
         ))}
-
-        <PremiumBanner />
       </div>
     </AppShell>
   );
